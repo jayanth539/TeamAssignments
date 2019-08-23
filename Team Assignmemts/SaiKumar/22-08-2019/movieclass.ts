@@ -34,6 +34,12 @@ class Movieclass{
     getMovieMsg():String{
         return getMovieMessage(this.moviename,this.releasedate,this.budget);
     }
+    getTicketPrice():number{
+        return ticketPrice();
+    }
+}
+function ticketPrice(): number{
+    return 120;
 }
 function getMovieMessage(movie:string,releasedate:Date,budget:number): string{
 var currdate = new Date();
@@ -46,7 +52,8 @@ return str;
 var mobj:Movieclass=new Movieclass("saaho","sujeeth",new Date("08-30-2019"),30000000,"guru");
 console.log(mobj.getBudget());
 console.log(mobj.getMovieMsg());
+console.log(mobj.getTicketPrice());
 
 //ternary operator
-console.log(12=="12");
-console.log(12==="12");
+// console.log(12=="12");
+// console.log(12==="12");
